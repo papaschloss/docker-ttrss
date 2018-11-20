@@ -22,6 +22,15 @@ update_plugin_mobilize()
     sed -i -e "s/<?$/<?php/g" ${TTRSS_PATH}/plugins/mobilize/m.php
 }
 
+# For use with News+ on Android. Buy the Pro version -- I love it!	
+update_plugin_newsplus()	
+{	
+    echo "Updating: News+ plugin"	
+    ( cd ${TTRSS_PATH}/plugins/api_newsplus && git pull origin HEAD )	
+     # Link plugin to TTRSS.	
+    ln -f -s ${TTRSS_PATH}/plugins/api_newsplus/api_newsplus/init.php ${TTRSS_PATH}/plugins/api_newsplus/init.php	
+}	
+
 update_plugin_feediron()
 {
     echo "Updating: FeedIron"
@@ -59,6 +68,7 @@ update_common()
 
 update_ttrss
 update_plugin_mobilize
+update_plugin_newsplus
 update_plugin_feediron
 update_theme_feedly
 update_common
