@@ -70,7 +70,7 @@ update_common()
 }
 
 update_ttrss
-update_readability
+#update_readability
 update_newspaper
 update_plugin_newsplus
 update_plugin_feediron
