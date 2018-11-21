@@ -63,7 +63,6 @@ setup_ttrss()
             echo "Setup: Setting up Tiny Tiny RSS (latest revision) ..."
             git clone --depth=1 ${TTRSS_REPO_URL} ${TTRSS_PATH}
         fi
-        git clone --depth=1 https://github.com/sepich/tt-rss-mobilize.git ${TTRSS_PATH}/plugins/mobilize
         git clone --depth=1 https://github.com/hrk/tt-rss-newsplus-plugin.git ${TTRSS_PATH}/plugins/api_newsplus
         git clone --depth=1 https://github.com/m42e/ttrss_plugin-feediron.git ${TTRSS_PATH}/plugins/feediron
         git clone --depth=1 https://github.com/levito/tt-rss-feedly-theme.git ${TTRSS_PATH}/themes/feedly-git
@@ -130,7 +129,6 @@ setup_db()
 {
     echo "Setup: Database"
     php -f /srv/ttrss-configure-db.php
-    php -f /srv/ttrss-configure-plugin-mobilize.php
 }
 
 setup_nginx
