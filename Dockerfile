@@ -16,6 +16,8 @@ RUN set -xe && \
     php7-phar php7-xml composer \
     libxslt-dev libxml2-dev python3-dev gcc py3-pillow linux-headers musl-dev
 
+RUN pip3 install newspaper3k
+
 # Add user www-data for php-fpm.
 # 82 is the standard uid/gid for "www-data" in Alpine.
 RUN adduser -u 82 -D -S -G www-data www-data
