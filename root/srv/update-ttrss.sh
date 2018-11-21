@@ -28,6 +28,12 @@ update_plugin_feediron()
     ( cd ${TTRSS_PATH}/plugins/feediron && git pull origin HEAD )
 }
 	
+update_newspaper()
+{
+    echo "Updating: Newspaper"
+    ( cd ${TTRSS_PATH}/plugins/newspaper_fulltext && git pull origin HEAD )
+}
+
 update_readability()
 {
     echo "Updating: Readability"
@@ -65,6 +71,7 @@ update_common()
 
 update_ttrss
 update_readability
+update_newspaper
 update_plugin_newsplus
 update_plugin_feediron
 update_theme_feedly
