@@ -27,6 +27,12 @@ update_plugin_feediron()
     echo "Updating: FeedIron"
     ( cd ${TTRSS_PATH}/plugins/feediron && git pull origin HEAD )
 }
+	
+update_readability()
+{
+    echo "Updating: Readability"
+    ( cd ${TTRSS_PATH} && composer update )
+}
 
 update_theme_feedly()
 {
@@ -58,6 +64,7 @@ update_common()
 }
 
 update_ttrss
+update_readability
 update_plugin_newsplus
 update_plugin_feediron
 update_theme_feedly
