@@ -64,6 +64,7 @@ setup_ttrss()
             git clone --depth=1 ${TTRSS_REPO_URL} ${TTRSS_PATH}
         fi
         git clone --depth=1 https://github.com/hrk/tt-rss-newsplus-plugin.git ${TTRSS_PATH}/plugins/api_newsplus
+        git clone --depth=1 https://github.com/papaschloss/newspaper-fulltext.git ${TTRSS_PATH}/plugins/newspaper_fulltext
         git clone --depth=1 https://github.com/m42e/ttrss_plugin-feediron.git ${TTRSS_PATH}/plugins/feediron
         git clone --depth=1 https://github.com/levito/tt-rss-feedly-theme.git ${TTRSS_PATH}/themes/feedly-git
         composer require andreskrey/readability.php
