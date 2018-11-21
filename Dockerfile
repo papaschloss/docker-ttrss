@@ -14,7 +14,8 @@ RUN set -xe && \
     php7-mysqli php7-pdo_mysql \
     php7-mbstring php7-posix php7-session \
     php7-phar php7-xml composer \
-    libxslt-dev libxml2-dev python3-dev gcc py3-pillow linux-headers musl-dev
+    libxslt-dev libxml2-dev python3-dev gcc py3-pillow linux-headers musl-dev \
+    py3-lxml py3-chardet py3-idna py3-urllib3 py3-certifi py3-requests py3-six py3-dateutil py3-beautifulsoup4 py3-feedparser py3-cssselect py3-yaml 
 
 RUN pip3 install newspaper3k
 
