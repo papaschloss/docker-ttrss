@@ -20,8 +20,8 @@ RUN set -xe && \
 RUN pip3 install newspaper3k
 
 # Add user www-data for php-fpm.
-# 82 is the standard uid/gid for "www-data" in Alpine.
-RUN adduser -u 82 -D -S -G www-data www-data
+# 80 is the ubuntu www-data user
+RUN adduser -u 80 -D -S -G www-data www-data
 
 # Copy root file system.
 COPY root /
